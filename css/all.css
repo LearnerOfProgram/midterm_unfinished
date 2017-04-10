@@ -1,0 +1,265 @@
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+---
+
+body {
+	font-family: "微軟正黑體";
+}
+
+.wrap{
+	font-family: "微軟正黑體";
+	width: 100%;
+	min-height: 100%
+	position: relative;
+}
+
+
+.header {
+	height: 65px;
+	margin: 25px;
+	position: relative;
+	/*background-color: #211E1E;*/
+}
+
+.logo{
+	width: 330px;
+	background-color: #A0A0A0;
+	float: left;
+}
+
+.logo a{
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+}
+
+.functionBar{
+	width: 750px;
+	position: absolute;
+ 	bottom: 0px;
+ 	right: 0px;
+	margin: 0 25px;
+	float: right;
+	/*background-color: #A0B4DC;*/
+}
+
+.functionBar ul li {
+	/*第一層清單*/
+	width: 200px;
+	list-style-type: none;
+	float: left;
+	position: relative;
+	margin-top: 5px;
+	font-size: 22px;
+	z-index: 99;
+}
+
+.functionBar ul li a{
+	display: block;
+	padding: 15px 20px 0 20px;
+	margin: 0 25px;
+	text-decoration: none;
+	text-align: center;
+	border-bottom: 5px solid rgba(255,255,255,0);		/*預設一個透明底*/
+}
+
+.functionBar ul li:hover > a{
+	border-bottom: 5px solid blue;
+	background-color: #F2F2F2;
+}
+
+.functionBar li:hover > ul {
+	display: block;
+	opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+
+.functionBar ul ul{
+	/*次選單 第二層清單*/
+	text-decoration: none;
+	border-bottom: 5px solid rgba(255,255,255,0);		/*預設一個透明底*/
+	z-index: 999;
+	position: absolute;
+	padding-top: 15px;
+	top: 22px;
+    left: 20px;
+    display: none;
+	opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+
+.content{
+	background-color: #92C2FF;
+	width: 1200px;
+	margin: 20px auto;
+	padding: 30px 0px;
+}
+
+.content-title{
+	margin: 0px auto;
+	background-color: #8FB470;
+	text-align:center;
+	width: 250px;
+	padding: 15px 0;
+}
+
+
+
+.area-opt-list{
+	float: left;
+	background-color: #8FB470;
+	margin: 30px 40px 20px 60px;
+	width: 250px;
+	height: 960px;
+	padding: 15px 0;
+}
+
+.area-opt-bottom{
+	background: white;
+	width: 200px;
+	/*height: 50px;*/
+	padding: 20px 0;
+	margin: 30px auto 0px auto;
+	text-align: center;
+}
+
+.area-opt-bottom a{
+	background-color:  rgba(255,255,255,0);
+	display: block;
+	border: none;
+	font-size: 23px;
+	text-decoration: none;
+}
+
+.schedule-area{
+	float: left;
+	background-color: #8FB470;
+	margin: 30px 0px;
+	width: 780px;
+	/*height: 850px; */
+}
+
+.switch-page{
+	background-color: white;
+	text-align: center;
+	width: 150px;
+	/*height: 30px;*/
+	padding: 15px 0;
+	margin:30px 0px 30px 400px; 
+}
+
+.movie{
+	background: white;
+	width: 630px;
+	padding: 10px;
+	margin: 20px auto;
+}
+
+.movie-pic{
+	background: #92C2FF;
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 5px 0px 5px 10px;
+}
+
+.movie-info{
+	float: left;
+	/*width: 400px;*/
+	height: 120px;  
+	margin: 5px 0px 5px 10px;
+}
+
+.movie-name{
+	background: #92C2FF;
+	float: left;
+	width: 150px;
+	height: 30px;
+
+}
+
+.movie-class{
+	background: #92C2FF;
+	float: left;
+	height: 30px;
+	width: 45px;
+	margin-left: 5px; 
+}
+
+.movie-time{
+	background: #92C2FF;
+	float: left;
+	height: 115px;
+	width: 140px;
+	margin-right: 10px;
+	margin-top: 3px; 
+}
+
+.clear{
+	clear: both;
+}
+
+
+.footer {
+	width: 1332px;
+	height: 150px;
+	background-color: #FFAD5F;
+	position: relative;
+	bottom: 0;
+}
